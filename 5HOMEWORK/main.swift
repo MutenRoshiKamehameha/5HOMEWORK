@@ -124,7 +124,7 @@ getLetters(stroka: stroka)
 
 
 
-
+///2 задание
 //Телефонная книга
 var names = ["Nurik", "Mom", "Dad", "Magda", "Nadik", "Rus", "GeekTech",
 "Police", "Ambulance", "Delivery","Call Center"]
