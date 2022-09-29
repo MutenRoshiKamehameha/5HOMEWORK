@@ -44,84 +44,110 @@ import Foundation
 
 //1 задание
 //Саммое длинное и самое короткое слово
-var maxWord = ""
-var minWord = ""
+//var maxWord = ""
+//var minWord = ""
+//
+//
+//
+//var numLetters = 0
+//
+//
+//var printedWord = ""
+//
+//var maxLetters = 0
+//var minLetters = 0
+//
+//
+//func getLetters(stroka:String){
+//
+//
+//    for x  in stroka{
+//        if x == " " || x == ","{
+//
+//           numLetters = (printedWord.count)
+//
+//
+//
+//                  if numLetters > maxLetters {
+//                maxLetters = numLetters
+//                numLetters = 0
+//                maxWord += printedWord
+//
+//            }
+//            printedWord = ""
+//
+//
+//
+//            if numLetters < maxLetters {
+//                minLetters = numLetters
+//                numLetters = 0
+//               minWord += printedWord
+//            }
+//
+//            printedWord = ""
+//            minWord = ""
+//
+//
+//
+//        }else{
+//
+//            maxWord += String(x)
+//
+//            minWord += String(x)
+//
+//        }
+//    }
+//    if printedWord.count  > minLetters{
+//        maxLetters = printedWord.count
+//        maxWord = printedWord
+//        printedWord = ""
+//    }
+//    if printedWord.count  < maxLetters {
+//        minLetters = printedWord.count
+//        minWord = printedWord
+//        printedWord = ""
+//    }
+//
+//    print("""
+//из списка слов: '\(stroka)'
+//
+//самое длинное "\(maxWord)" (\(maxWord.count)) букв
+//самое короткое "\(minWord)" (\(minWord.count)) букв
+//""")
+//
+//}
+//print("НАПИШТЕ СЛОВА:")
+//
+//var stroka:String = readLine()!
+//
+//getLetters(stroka: stroka)
 
+print("""
+Чтобы узнать какое слово самое длинное и короткое
+напишите слова в строчку через "пробел" или ","
+в конце введите "пробел" и нажмите "Enter" для расчета
+(слова не должны быть длиннее 10 букв(временно))
 
-
-var numLetters = 0
-
-
-var printedWord = ""
-
-var maxLetters = 0
-var minLetters = 0
-
-
-func getLetters(stroka:String){
-
-
-    for x  in stroka{
-        if x == " " || x == ","{
-
-           numLetters = (printedWord.count)
-
-
-
-                  if numLetters > maxLetters {
-                maxLetters = numLetters
-                numLetters = 0
-                maxWord += printedWord
-
-            }
-            printedWord = ""
-
-
-
-            if numLetters < maxLetters {
-                minLetters = numLetters
-                numLetters = 0
-               minWord += printedWord
-            }
-
-            printedWord = ""
-            minWord = ""
-
-
-
-        }else{
-
-            maxWord += String(x)
-
-            minWord += String(x)
-
-        }
-    }
-    if printedWord.count  > minLetters{
-        maxLetters = printedWord.count
-        maxWord = printedWord
-        printedWord = ""
-    }
-    if printedWord.count  < maxLetters {
-        minLetters = printedWord.count
-        minWord = printedWord
-        printedWord = ""
-    }
-
-    print("""
-из списка слов: '\(stroka)'
-
-самое длинное "\(maxWord)" (\(maxWord.count)) букв
-самое короткое "\(minWord)" (\(minWord.count)) букв
 """)
-
+let read = readLine()!
+var mass:[String] = []
+var words = ""
+var mass3:[Int] = []
+for o in read {
+    if o != "," && o != " "{
+        words += String(o)
+    }else {
+        mass.append(String(words.count) + (" букв в слове \(words)"))
+       
+            words = ""
+       
+    }
 }
-print("НАПИШТЕ СЛОВА:")
 
-var stroka:String = readLine()!
+var mass2:[String] = mass.sorted()
 
-getLetters(stroka: stroka)
-
+print("\(mass2[mass2.count - 1]) ")
+print("\(mass2[0]) ")
 
 
 ///2 задание
@@ -249,7 +275,7 @@ var allQuestions = ("""
                     
                         """
                         10)Вопрос
-                        Факториал 13
+                        Факториал 11
                         1.39 916 800       2.1 967 845
                                                            
                         3.266 780          4.78 145
