@@ -10,38 +10,6 @@ import Foundation
 //
 
 
-//func getNumb(string:String){
-//    var currentNumb = ""
-//    var num = 0
-//    var max = 0
-//
-//    for x  in string{
-//        if x == " " || x == ","{
-//            num = currentNumb.count
-//            if num > max {
-//                max = num
-//                num = 0
-//
-//            }
-//            currentNumb = ""
-//        }else{
-//            currentNumb += String(x)
-//        }
-//    }
-//    if currentNumb.count > max {
-//        max = currentNumb.count
-//    }
-//    print("\(string) - \(currentNumb) - \(max)")
-//}
-//print("print Numbers:")
-//
-//let readline = readLine()!
-//
-//getNumb(string: readline)
-
-
-
-
 //1 задание
 //Саммое длинное и самое короткое слово
 //var maxWord = ""
@@ -150,17 +118,58 @@ print("\(mass2[mass2.count - 1]) ")
 print("\(mass2[0]) ")
 
 
+
+
+
+
+
+
+
+
 ///2 задание
 //Телефонная книга
-var names = ["Nurik", "Mom", "Dad", "Magda", "Nadik", "Rus", "GeekTech",
-"Police", "Ambulance", "Delivery","Call Center"]
-var numberss = [777834413, 707, 772600095, 502041204, 776520207, 778670100, 555165510,554534356, 708123423,
-222674573, 509347856]
-var namesAplha = names.sorted()
-for (index,item) in  namesAplha.enumerated(){
-    print("\(index + 1). \(item) - \(numberss[index])")
 
+print("""
+
+Чтобы добавить контакт выполните следующеe:
+"имя(на англ) - номер ,имя(на англ) - номер,и т.д."
+Повторите эту конструкцию столько раз, сколько надо
+Для окончания обязательно введите " . " и нажмите "Enter"
+
+* не делайте отступов после запятой, старайтесь писать номера без ошибок *
+
+""")
+let printNameNumber = readLine()!
+var phoneBook:[String] = []
+var qwerty = ""
+for o in printNameNumber {
+    if o != "," && o != "."{
+        qwerty += String(o)
+    }else{
+        phoneBook.append(qwerty)
+        qwerty = ""
+    }
 }
+
+
+for (index,item) in phoneBook.sorted().enumerated(){
+
+    print("\(index + 1). \(item)")
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
